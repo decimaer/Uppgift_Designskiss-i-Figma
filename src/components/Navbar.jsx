@@ -6,18 +6,22 @@ import imgProfilePic from "../assets/ProfilePic.png";
 const ProductContent = function () {
 	return (
 		<nav>
-			<img src={imgSneakers} alt="" />
-			<div className="nav-menu">
-				<span className="menu-item">Collections</span>
-				<span className="menu-item">Men</span>
+			<img src={imgSneakers} alt="" id="img-logo" />
+			{/* FIXME class name */}
+			<div className="NAMN">
+				<div className="nav-menu">
+					<span className="menu-item">Collections</span>
+					<span className="menu-item">Men</span>
 
-				<span className="menu-item">Women</span>
-				<span className="menu-item">About</span>
-				<span className="menu-item">Contact</span>
-			</div>
-			<div>
-				<img src={imgCartIcon} alt="" />
-				<img src={imgProfilePic} alt="" />
+					<span className="menu-item">Women</span>
+					<span className="menu-item">About</span>
+					<span className="menu-item">Contact</span>
+				</div>
+				{/* FIXME class name */}
+				<div className="NAMN2">
+					<img src={imgCartIcon} alt="" id="img-cart-icon" />
+					<img src={imgProfilePic} alt="" id="img-profile-pic" />
+				</div>
 			</div>
 		</nav>
 	);
