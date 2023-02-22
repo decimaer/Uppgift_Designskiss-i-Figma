@@ -3,20 +3,15 @@ import styles from "./ProductImagePreview.module.scss";
 import ProductThumbnail from "./ProductThumbnail";
 
 const ProductImagePreview = function ({ product }) {
-	// const [images, setImages] = useState(product.images);
 	const [index, setIndex] = useState(0);
 	const handleSelectImage = (event) => {
 		console.log(product.images);
 		const targetId = event.target.id;
-		// const newImageArray = [...product.images];
 		const index = product.images.findIndex((image) => image.id === targetId);
 		console.log(targetId, index);
 
 		setIndex(index);
 	};
-
-	console.log(product.images);
-	// console.log(images);
 
 	return (
 		<section className={styles.container}>
