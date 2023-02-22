@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./ProductImagePreview.module.scss";
+import ProductThumbnail from "./ProductThumbnail";
 
 const ProductImagePreview = function ({ product }) {
 	// const [images, setImages] = useState(product.images);
@@ -26,14 +27,11 @@ const ProductImagePreview = function ({ product }) {
 			/>
 			<div className={styles.thumbContainer} onClick={handleSelectImage}>
 				{product.images.map((image, i) => (
-					<img
-						src={image.src}
-						alt=""
-						className={`${styles.thumbnail} ${
-							i === index ? styles.thumbSelected : ""
-						}`}
+					<ProductThumbnail
+						image={image}
+						targetIndex={index}
+						currentIndex={i}
 						key={image.id}
-						id={image.id}
 					/>
 				))}
 			</div>
