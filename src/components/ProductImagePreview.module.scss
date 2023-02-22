@@ -1,0 +1,33 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.fullImage {
+	width: 450px;
+	height: 450px;
+	border-radius: 15px;
+}
+
+.thumbContainer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2em;
+}
+
+.thumbnail {
+	width: 88px;
+	height: 88px;
+	border-radius: 10px;
+	border: 2px solid transparent;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.thumbSelected {
+	border: 2px solid #ff7e1b;
+	//FIXME opacity only on image;
+	opacity: 0.25;
+}

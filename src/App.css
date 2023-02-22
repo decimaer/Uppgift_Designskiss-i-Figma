@@ -5,6 +5,7 @@
 .App {
 	max-width: 1110px;
 	margin: auto;
+	padding: 0 1em 0 1em;
 }
 
 /* #root {
