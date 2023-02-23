@@ -1,0 +1,70 @@
+.container {
+	margin-left: 125px;
+	margin-top: 62px;
+}
+
+.companyName {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+	color: #ff7e1b;
+}
+
+.productName {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 48px;
+	color: #1d2026;
+	margin-top: 27px;
+	margin-bottom: 0;
+}
+
+.productDescription {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	color: #69707d;
+	margin-top: 2rem;
+}
+
+.discountPrice {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 35px;
+
+	color: #1d2026;
+}
+
+.discountPercent {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	color: #ff7e1b;
+
+	background: #ffeee2;
+	border-radius: 6px;
+	padding: 5px 8px 5px 8px;
+	margin-left: 1rem;
+}
+
+.originalPrice {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 26px;
+	/* identical to box height, or 162% */
+
+	text-decoration-line: line-through;
+
+	color: #b6bcc8;
+
+	margin-top: 10px;
+}
