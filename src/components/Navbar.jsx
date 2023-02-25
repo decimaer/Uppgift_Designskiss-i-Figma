@@ -3,6 +3,9 @@ import imgSneakers from "../assets/sneakers.svg";
 import imgCartIcon from "../assets/CartIcon.svg";
 import imgProfilePic from "../assets/ProfilePic.png";
 
+// FIXME: function name, component name Header
+// FIXME: import svg as component
+
 const ProductContent = function () {
 	return (
 		<nav>

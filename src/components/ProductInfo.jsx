@@ -1,7 +1,7 @@
 import ProductAddToCartBar from "./ProductAddToCartBar";
 import styles from "./ProductInfo.module.scss";
 
-const ProductInfo = function ({ product }) {
+const ProductInfo = function ({ product, cart, onAddProduct }) {
 	console.log();
 	return (
 		<section className={styles.container}>
@@ -11,7 +11,11 @@ const ProductInfo = function ({ product }) {
 			<span className={styles.discountPrice}>{product.discountPrice}</span>
 			<span className={styles.discountPercent}>{product.discount}</span>
 			<p className={styles.originalPrice}>{product.originalPrice}</p>
-			<ProductAddToCartBar />
+			<ProductAddToCartBar
+				cart={cart}
+				productID={product.id}
+				onAddProduct={onAddProduct}
+			/>
 		</section>
 	);
 };

@@ -1,9 +1,10 @@
-// import { useState } from 'react'
+import { useState } from "react";
 import "./App.css";
 import NavBar from "./components/Navbar";
 import ProductContent from "./components/ProductContent";
 
 const productObject = {
+	id: "9432oiurewlkjfs09i32",
 	company: "Sneaker Company",
 	productName: "Fall Limited Edition Sneakers",
 	description:
@@ -20,10 +21,35 @@ const productObject = {
 };
 
 const App = function () {
+	const [cart, setCart] = useState([]);
+
+	const onAddProduct = (productID, amount) => {
+		const index = cart.findIndex((item) => item.id === productID);
+		console.log(index, productID);
+		console.log(cart);
+		if (index === -1) {
+			setCart([...cart, { id: productID, amount: amount }]);
+		} else {
+			const newCart = cart.map((item) => Object.assign({}, item));
+
+			if (newCart[index].amount > 0) {
+				newCart[index].amount += amount;
+				setCart(newCart);
+			}
+			// if (newCart[index].amount === 0) {
+			// 	newCart.splice(index, 1);
+			// }
+		}
+	};
+
 	return (
 		<div className="App">
-			<NavBar />
-			<ProductContent product={productObject} />
+			<NavBar cart={cart} />
+			<ProductContent
+				product={productObject}
+				cart={cart}
+				onAddProduct={onAddProduct}
+			/>
 		</div>
 	);
 };
