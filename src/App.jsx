@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import NavBar from "./components/Navbar";
+import Header from "./components/Header";
 import ProductContent from "./components/ProductContent";
 
 const productObject = {
@@ -44,7 +44,7 @@ const App = function () {
 
 	return (
 		<div className="App">
-			<NavBar cart={cart} />
+			<Header cart={cart} />
 			<ProductContent
 				product={productObject}
 				cart={cart}

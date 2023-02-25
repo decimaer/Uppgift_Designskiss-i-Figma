@@ -1,0 +1,70 @@
+header {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #e4e9f2;
+	height: 112px;
+}
+
+.imgLogo {
+	height: 20px;
+	min-width: 138px;
+	margin-right: 40.5px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+
+	div {
+		display: flex;
+		align-items: center;
+	}
+}
+
+nav {
+	display: flex;
+	height: 100%;
+	align-items: stretch;
+}
+
+.menuItem {
+	background: none;
+	border: none;
+	padding: 0;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 26px;
+
+	margin: 0 1em 0 1em;
+	color: #69707d;
+	border-bottom: 4px solid transparent;
+
+	&:hover {
+		border-bottom: 4px solid #ff7e1b;
+		color: #1d2026;
+	}
+}
+
+.imgCartIcon {
+	height: 20px;
+	margin-right: 46px;
+
+	&:hover > path {
+		fill: #1d2026;
+	}
+}
+
+.imgProfilePic {
+	width: 50px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+
+	&:hover {
+		border: 2px solid #ff7e1b;
+	}
+}
