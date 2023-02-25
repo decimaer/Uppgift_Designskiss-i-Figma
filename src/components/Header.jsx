@@ -1,9 +1,10 @@
+import HeaderCart from "./HeaderCart";
 import styles from "./Header.module.scss";
 import { ReactComponent as ImgCartIcon } from "/src/assets/CartIcon.svg";
 import { ReactComponent as ImgSneakers } from "/src/assets/sneakers.svg";
 import imgProfilePic from "/src/assets/ProfilePic.png";
 
-const Header = function () {
+const Header = function ({ cart }) {
 	return (
 		<header>
 			<ImgSneakers className={styles.imgLogo} />
@@ -16,8 +17,9 @@ const Header = function () {
 					<button className={styles.menuItem}>About</button>
 					<button className={styles.menuItem}>Contact</button>
 				</nav>
-				<div>
-					<ImgCartIcon className={styles.imgCartIcon} />
+				<div className={styles.rightSection}>
+					<HeaderCart cart={cart} />
+
 					<img
 						src={imgProfilePic}
 						alt=""

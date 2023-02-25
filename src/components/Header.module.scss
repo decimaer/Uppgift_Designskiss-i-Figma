@@ -18,7 +18,7 @@ header {
 	width: 100%;
 	height: 100%;
 
-	div {
+	.rightSection {
 		display: flex;
 		align-items: center;
 	}
@@ -47,15 +47,6 @@ nav {
 	&:hover {
 		border-bottom: 4px solid #ff7e1b;
 		color: #1d2026;
-	}
-}
-
-.imgCartIcon {
-	height: 20px;
-	margin-right: 46px;
-
-	&:hover > path {
-		fill: #1d2026;
 	}
 }
 

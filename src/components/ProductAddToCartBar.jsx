@@ -19,10 +19,12 @@ const ProductAddToCartBar = ({ productID, cart, onAddProduct }) => {
 			setLocalNumberProducts(localNumberProducts - 1);
 		} else if (targetButton === "addButton") {
 			onAddProduct(productID, localNumberProducts);
+			//FIXME reset localNumberProducts
 		}
 	};
 
 	const displayProductAmount = (id) => {
+		// FIXME remove?
 		// return number of products in cart
 		return cart.find((item) => item.id === id)?.amount ?? 0;
 	};
