@@ -19,6 +19,7 @@ header {
 	height: 100%;
 
 	.rightSection {
+		// position: relative;
 		display: flex;
 		align-items: center;
 	}
@@ -59,3 +60,7 @@ nav {
 		border: 2px solid #ff7e1b;
 	}
 }
+
+// .hidden {
+// 	display: none;
+// }

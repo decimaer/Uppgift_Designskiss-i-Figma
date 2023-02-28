@@ -18,6 +18,7 @@ const ProductAddToCartBar = ({ productID, cart, onAddProduct }) => {
 		} else if (targetButton === "minusButton" && localNumberProducts > 0) {
 			setLocalNumberProducts(localNumberProducts - 1);
 		} else if (targetButton === "addButton") {
+			if (!localNumberProducts) return;
 			onAddProduct(productID, localNumberProducts);
 			//FIXME reset localNumberProducts
 		}

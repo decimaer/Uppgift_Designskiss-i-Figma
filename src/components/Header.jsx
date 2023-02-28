@@ -1,10 +1,20 @@
+import { useState } from "react";
 import HeaderCart from "./HeaderCart";
+import CartModal from "./CartModal";
+
 import styles from "./Header.module.scss";
-import { ReactComponent as ImgCartIcon } from "/src/assets/CartIcon.svg";
+// import { ReactComponent as ImgCartIcon } from "/src/assets/CartIcon.svg";
 import { ReactComponent as ImgSneakers } from "/src/assets/sneakers.svg";
 import imgProfilePic from "/src/assets/ProfilePic.png";
 
-const Header = function ({ cart }) {
+const Header = function ({ cart, getProduct }) {
+	const [hideCartModal, setHideCartModal] = useState(true);
+
+	const handleShowCart = () => {
+		console.log("click open cart");
+		hideCartModal ? setHideCartModal(false) : setHideCartModal(true);
+	};
+
 	return (
 		<header>
 			<ImgSneakers className={styles.imgLogo} />
@@ -18,7 +28,13 @@ const Header = function ({ cart }) {
 					<button className={styles.menuItem}>Contact</button>
 				</nav>
 				<div className={styles.rightSection}>
-					<HeaderCart cart={cart} />
+					<CartModal
+						cart={cart}
+						getProduct={getProduct}
+						hideCartModal={hideCartModal}
+						handleShowCart={handleShowCart}
+					/>
+					<HeaderCart cart={cart} handleShowCart={handleShowCart} />
 
 					<img
 						src={imgProfilePic}

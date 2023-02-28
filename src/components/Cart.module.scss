@@ -1,0 +1,23 @@
+.checkoutButton {
+	border: none;
+	padding: 0;
+
+	margin: 1.5em 1.5em 2em 1.5em;
+
+	max-width: 100%;
+	height: 56px;
+
+	background: #ff7e1b;
+	border-radius: 10px;
+
+	&:hover {
+		background-color: #ffab6a;
+	}
+
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+
+	color: #ffffff;
+}
