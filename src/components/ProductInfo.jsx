@@ -8,10 +8,11 @@ const ProductInfo = function ({ product, cart, onAddProduct }) {
 			<span className={styles.companyName}>{product.company}</span>
 			<h1 className={styles.productName}>{product.productName}</h1>
 			<p className={styles.productDescription}>{product.description}</p>
-			{/* FIXME add $ and .00 to price */}
-			<span className={styles.discountPrice}>{product.discountPrice}</span>
+			<span className={styles.discountPrice}>
+				${product.discountPrice}.00
+			</span>
 			<span className={styles.discountPercent}>{product.discount}</span>
-			<p className={styles.originalPrice}>{product.originalPrice}</p>
+			<p className={styles.originalPrice}>${product.originalPrice}.00</p>
 			<ProductAddToCartBar
 				cart={cart}
 				productID={product.id}
