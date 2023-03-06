@@ -1,0 +1,27 @@
+.dialog {
+	background: transparent;
+	border: none;
+
+	&::backdrop {
+		background-color: rgba(0, 0, 0, 0.75);
+	}
+}
+
+.lightboxContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.fullImage {
+	width: 550px;
+	height: 550px;
+	border-radius: 15px;
+}
+
+.thumbContainer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2em;
+	width: 450px;
+}

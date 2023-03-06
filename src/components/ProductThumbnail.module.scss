@@ -1,24 +1,31 @@
 .imgContainer {
+	box-sizing: content-box;
 	width: 88px;
 	height: 88px;
 	border-radius: 10px;
+	background-size: cover;
+	background-clip: content-box;
 	border: 2px solid transparent;
 }
 
 .imgContainerSelected {
 	border-color: #ff7e1b;
+	// opacity: 0.25;
 }
 
-.thumbnail {
-	width: 88px;
-	height: 88px;
+.imgOverlay {
+	// width: 88px;
+	// height: 88px;
+	// border-radius: 8px;
+	width: 100%;
+	height: 100%;
 	border-radius: 8px;
 
 	&:hover {
-		opacity: 0.5;
+		background-color: rgb(255, 255, 255, 0.5);
 	}
 }
 
-.thumbSelected {
-	opacity: 0.25;
+.imgOverlaySelected {
+	background-color: rgb(255, 255, 255, 0.75);
 }
