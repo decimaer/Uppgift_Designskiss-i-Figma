@@ -20,15 +20,10 @@ const ProductAddToCartBar = ({ productID, cart, onAddProduct }) => {
 		} else if (targetButton === "addButton") {
 			if (!localNumberProducts) return;
 			onAddProduct(productID, localNumberProducts);
-			//FIXME reset localNumberProducts
+			setLocalNumberProducts(0);
 		}
 	};
 
-	const displayProductAmount = (id) => {
-		// FIXME remove?
-		// return number of products in cart
-		return cart.find((item) => item.id === id)?.amount ?? 0;
-	};
 	return (
 		<div className={styles.container} onClick={handleAddProduct}>
 			<div className={styles.plusMinusButtonContainer}>

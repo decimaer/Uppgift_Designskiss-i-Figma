@@ -1,8 +1,18 @@
-.thumbnail {
+.imgContainer {
 	width: 88px;
 	height: 88px;
 	border-radius: 10px;
 	border: 2px solid transparent;
+}
+
+.imgContainerSelected {
+	border-color: #ff7e1b;
+}
+
+.thumbnail {
+	width: 88px;
+	height: 88px;
+	border-radius: 8px;
 
 	&:hover {
 		opacity: 0.5;
@@ -10,7 +20,5 @@
 }
 
 .thumbSelected {
-	border: 2px solid #ff7e1b;
-	//FIXME opacity only on image;
 	opacity: 0.25;
 }

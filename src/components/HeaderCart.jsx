@@ -12,10 +12,11 @@ const HeaderCart = ({ cart, handleShowCart }) => {
 	return (
 		<div className={styles.headerCart} onClick={handleShowCart}>
 			<ImgCartIcon className={styles.imgCartIcon} />
-			{/* FIXME don't display if 0  */}
-			<span className={styles.cartItems}>
-				{displayNumberOfCartItems(cart)}
-			</span>
+			{cart.length === 0 ? null : (
+				<span className={styles.cartItems}>
+					{displayNumberOfCartItems(cart)}
+				</span>
+			)}
 		</div>
 	);
 };

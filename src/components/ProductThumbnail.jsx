@@ -2,14 +2,20 @@ import styles from "./ProductThumbnail.module.scss";
 
 const ProductThumbnail = ({ image, targetIndex, currentIndex }) => {
 	return (
-		<img
-			src={image.src}
-			alt=""
-			className={`${styles.thumbnail} ${
-				currentIndex === targetIndex ? styles.thumbSelected : ""
+		<div
+			className={`${styles.imgContainer} ${
+				currentIndex === targetIndex && styles.imgContainerSelected
 			}`}
-			id={image.id}
-		/>
+		>
+			<img
+				src={image.src}
+				alt=""
+				className={`${styles.thumbnail} ${
+					currentIndex === targetIndex && styles.thumbSelected
+				}`}
+				id={image.id}
+			/>
+		</div>
 	);
 };
 

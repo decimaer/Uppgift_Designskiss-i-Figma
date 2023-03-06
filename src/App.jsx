@@ -26,28 +26,10 @@ const getProduct = (productID) => {
 	return productObject;
 };
 
-/* const handleCloseModal = (event) => {
-	// console.log(event);
-	// console.log("close cart");
-	// event.preventDefault();
-	// event.stopPropagation();
-	const dialog = document.querySelector("dialog");
-
-	dialog.close();
-}; */
-
 const App = function () {
 	const [cart, setCart] = useState([]);
 
-	//for testing
-	// setCart([{ id: "9432oiurewlkjfs09i32", amount: 1 }]);
-	// setCart([...cart, { id: productObject.id, amount: 2 }]);
-	// setCart([...cart, { id: productObject.id, amount: 3 }]);
-
-	// end testing
-
 	const onAddProduct = (productID, amount) => {
-		//FIXME move out of App function?
 		const index = cart.findIndex((item) => item.id === productID);
 		console.log(index, productID);
 		console.log(cart);
@@ -60,9 +42,6 @@ const App = function () {
 				newCart[index].amount += amount;
 				setCart(newCart);
 			}
-			// if (newCart[index].amount === 0) {
-			// 	newCart.splice(index, 1);
-			// }
 		}
 	};
 

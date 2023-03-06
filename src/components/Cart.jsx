@@ -11,7 +11,6 @@ const Cart = ({ cart, getProduct, hideCartModal, handleShowCart }) => {
 					key={item.id}
 				/>
 			))}
-			{/* FIXME move button to own component and share with button in ProductAddtoCartBar? */}
 			<button className={styles.checkoutButton} onClick={handleShowCart}>
 				Checkout
 			</button>

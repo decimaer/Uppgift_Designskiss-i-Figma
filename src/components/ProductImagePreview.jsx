@@ -6,9 +6,12 @@ const ProductImagePreview = function ({ product }) {
 	const [index, setIndex] = useState(0);
 	const handleSelectImage = (event) => {
 		console.log(product.images);
+
 		const targetId = event.target.id;
 		const index = product.images.findIndex((image) => image.id === targetId);
+
 		console.log(targetId, index);
+		if (index === -1) return;
 
 		setIndex(index);
 	};
