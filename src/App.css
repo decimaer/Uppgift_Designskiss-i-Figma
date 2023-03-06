@@ -2,6 +2,10 @@
 	font-family: "Kumbh Sans";
 }
 
+button {
+	cursor: pointer;
+}
+
 .App {
 	max-width: 1110px;
 	margin: auto;
