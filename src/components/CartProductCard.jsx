@@ -1,13 +1,14 @@
 import styles from "./CartProductCard.module.scss";
 import { ReactComponent as TrashIcon } from "/src/assets/trash-icon.svg";
 
-const handleRemoveFromCart = () => {
-	//TODO
-	console.log("remove product from cart");
-};
-
-const CartProductCard = ({ productInCart, getProduct }) => {
+const CartProductCard = ({ productInCart, getProduct, onDeleteProduct }) => {
 	const product = getProduct(productInCart.id);
+
+	const handleRemoveFromCart = () => {
+		console.log("deleting product from cart");
+		onDeleteProduct(productInCart.id);
+	};
+
 	console.log(product);
 	return (
 		<div className={styles.container}>

@@ -7,7 +7,7 @@ import styles from "./Header.module.scss";
 import { ReactComponent as ImgSneakers } from "/src/assets/sneakers.svg";
 import imgProfilePic from "/src/assets/ProfilePic.png";
 
-const Header = function ({ cart, getProduct }) {
+const Header = function ({ cart, getProduct, onDeleteProduct }) {
 	const [hideCartModal, setHideCartModal] = useState(true);
 
 	const handleShowCart = () => {
@@ -33,6 +33,7 @@ const Header = function ({ cart, getProduct }) {
 						getProduct={getProduct}
 						hideCartModal={hideCartModal}
 						handleShowCart={handleShowCart}
+						onDeleteProduct={onDeleteProduct}
 					/>
 					<HeaderCart cart={cart} handleShowCart={handleShowCart} />
 

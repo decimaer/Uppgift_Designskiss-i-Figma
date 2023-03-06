@@ -45,9 +45,22 @@ const App = function () {
 		}
 	};
 
+	const onDeleteProduct = (productID) => {
+		const index = cart.findIndex((item) => item.id === productID);
+		if (index === -1) return;
+
+		const newCart = [...cart];
+		newCart.splice(index, 1);
+		setCart(newCart);
+	};
+
 	return (
 		<div className="App" /* onClickCapture={handleCloseModal} */>
-			<Header cart={cart} getProduct={getProduct} />
+			<Header
+				cart={cart}
+				getProduct={getProduct}
+				onDeleteProduct={onDeleteProduct}
+			/>
 			<ProductContent
 				product={productObject}
 				cart={cart}
