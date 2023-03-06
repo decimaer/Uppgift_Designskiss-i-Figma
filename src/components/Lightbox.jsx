@@ -1,10 +1,12 @@
 import { useState } from "react";
 import styles from "./Lightbox.module.scss";
 import ProductThumbnail from "./ProductThumbnail";
+import { ReactComponent as CloseIcon } from "/src/assets/close-icon.svg";
+import { ReactComponent as LeftArrowIcon } from "/src/assets/left-arrow-icon.svg";
+import { ReactComponent as RightArrowIcon } from "/src/assets/right-arrow-icon.svg";
 
 const Lightbox = function ({ product, lightboxRef, handleCloseLightbox }) {
 	const [index, setIndex] = useState(0);
-	// debugger;
 
 	const handleSelectImage = (event) => {
 		console.log(product.images);
@@ -34,20 +36,34 @@ const Lightbox = function ({ product, lightboxRef, handleCloseLightbox }) {
 			ref={lightboxRef}
 			onClose={handleCloseLightbox}
 		>
-			<button onClickCapture={handleCloseLightbox}>close</button>
-
 			<div className={styles.lightboxContainer}>
-				<button onClick={handleImageCarousel} data-direction={-1}>
-					left
+				<button
+					onClickCapture={handleCloseLightbox}
+					className={styles.buttonClose}
+				>
+					<CloseIcon />
 				</button>
-				<button onClick={handleImageCarousel} data-direction={1}>
-					right
-				</button>
-				<img
-					src={product.images[index].src}
-					alt=""
-					className={styles.fullImage}
-				/>
+				<div className={styles.bigImageContainer}>
+					<button
+						onClick={handleImageCarousel}
+						data-direction={-1}
+						className={`${styles.buttonLeftRight} ${styles.buttonLeft}`}
+					>
+						<LeftArrowIcon />
+					</button>
+					<button
+						onClick={handleImageCarousel}
+						data-direction={1}
+						className={`${styles.buttonLeftRight} ${styles.buttonRight}`}
+					>
+						<RightArrowIcon />
+					</button>
+					<img
+						src={product.images[index].src}
+						alt=""
+						className={styles.fullImage}
+					/>
+				</div>
 				<div className={styles.thumbContainer} onClick={handleSelectImage}>
 					{product.images.map((image, i) => (
 						<ProductThumbnail
