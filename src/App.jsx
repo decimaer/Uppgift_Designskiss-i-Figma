@@ -2,6 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import ProductContent from "./components/ProductContent";
+import ProductImg1 from "/Product-img1.png";
+import ProductImg2 from "/Product-img2.png";
+import ProductImg3 from "/Product-img3.png";
+import ProductImg4 from "/Product-img4.png";
 
 // The scenario is that this object is fetched from an API
 const productObject = {
@@ -14,10 +18,10 @@ const productObject = {
 	discountPrice: "125",
 	discount: "50%",
 	images: [
-		{ src: "/Product-img1.png", id: "img1" },
-		{ src: "/Product-img2.png", id: "img2" },
-		{ src: "/Product-img3.png", id: "img3" },
-		{ src: "/Product-img4.png", id: "img4" },
+		{ src: ProductImg1, id: "img1" },
+		{ src: ProductImg2, id: "img2" },
+		{ src: ProductImg3, id: "img3" },
+		{ src: ProductImg4, id: "img4" },
 	],
 };
 
